@@ -1,7 +1,20 @@
 import logo from '../logo.svg';
 import './Application.scss';
+import axios from "axios";
+import { useEffect } from "react";
 
 export default function Application() {
+
+  const stub = false;
+
+  useEffect(() => {
+    Promise.all([
+      axios.get('/tips/?tipIDs=[1,2,3]')
+    ]).then(all => {
+      console.log(all)
+      })
+    }, [stub]);
+
   return (
     <div className="App">
       <header className="App-header">
