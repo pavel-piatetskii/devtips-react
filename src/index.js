@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Application from 'components/Application';
 import reportWebVitals from './reportWebVitals';
+import Application from './components/Application';
 
-import './index.css';
+import './index.scss';
 
 ReactDOM.render(<Application />, document.getElementById('root'));
 
