@@ -2,7 +2,7 @@ import "./NavBar.scss";
 
 import logo from "./logo.png";
 import Search from "./Search";
-// import Login from "components/header/Login";
+import Login from "./Login";
 
 export default function NavBar(props) {
   return (
@@ -17,6 +17,7 @@ export default function NavBar(props) {
         <Search />
       </div>
       <div className="navbar__login">
+        <Login />
       </div>
     </nav>
   );
