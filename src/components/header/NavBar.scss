@@ -3,7 +3,8 @@
 .navbar {
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   min-height: 50px;
@@ -25,7 +26,8 @@
     margin-left: 0.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    width: 57;
+    width: 50px;
+    height: 50px;
   }
 
   &__title {
@@ -37,13 +39,7 @@
 
   &__search {
     display: flex;
-    flex-flow: row wrap;
     align-items: center;
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-    flex: 1;
-    margin: 0 15vw;
-    max-width: 768px;
   }
 
   &__user {
