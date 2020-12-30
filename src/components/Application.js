@@ -1,12 +1,12 @@
 import React from "react";
-import NavBar from "./header/NavBar.js";
+import Header from "./Header";
 
 import "./Application.scss";
 
 export default function Application() {
   return (
     <main className="layout">
-      <NavBar />
+      <Header />
     </main>
   );
 };

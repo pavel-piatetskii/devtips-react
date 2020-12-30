@@ -13,7 +13,7 @@ export default function Search(props) {
   return (
     <form className="search__form">
       <input
-        className="search__form-control"
+        className="search__form--control"
         name="search"
         type="search"
         placeholder="Search"

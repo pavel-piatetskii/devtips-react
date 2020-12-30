@@ -38,11 +38,11 @@
   }
 
   &__search {
-    display: flex;
-    align-items: center;
+    display: inline;
+    margin: 0.75rem;
   }
 
-  &__user {
+  &__login {
     display: flex;
     align-items: center;
     margin-left: 0.75rem;

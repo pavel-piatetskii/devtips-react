@@ -1,10 +1,23 @@
-import "./NavBar.scss";
+
+
+import "./index.scss";
+
+// import useVisualMode from "src/hooks/useVisualMode";
 
 import logo from "./logo.png";
 import Search from "./Search";
-import Login from "./Login";
+import NoUser from "./NoUser";
 
-export default function NavBar(props) {
+export default function Header(props) {
+  /*
+  const LOGGED_IN = "LOGGED_IN";
+  const NO_USER = "NO_USER";
+
+  const { mode, transition, back } = useVisualMode(
+    props.user ? LOGGED_IN : NO_USER
+  );
+  */
+
   return (
     <nav className="navbar">
       <div className="navbar--centered">
@@ -17,7 +30,7 @@ export default function NavBar(props) {
         <Search />
       </div>
       <div className="navbar__login">
-        <Login />
+        <NoUser />
       </div>
     </nav>
   );
