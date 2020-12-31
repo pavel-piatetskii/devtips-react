@@ -47,3 +47,13 @@
     padding: 0.5em 1em;
 
   }
+
+  .tip-controls {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    
+    > * {
+      padding: 0.25em 0.25em;
+    }
+  }

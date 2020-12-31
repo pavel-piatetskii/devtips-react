@@ -58,9 +58,10 @@ export default function TipListItem(props) {
 		<div className="tip-list-item">
 			<div className="tip-controls">
 						<img className={likeClass} id={likeID}></img>
-						<a>{Parser("&#128077")}</a>;
+						<a>{Parser("&#128077")}</a>
 						<span className="like badge badge-dark mb-2">{likes.length}</span>
 						<img className={bookClass} id={bookID}></img>
+						<a>{Parser("&#128214")}</a>
 				</div>
 					<div className="tip-content">
 						<div className="tip-title-and-time">
