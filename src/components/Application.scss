@@ -1,5 +1,11 @@
 @import "src/styles/variables.scss";
 
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .layout {
   display: flex;
 }
