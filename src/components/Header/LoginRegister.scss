@@ -1,0 +1,37 @@
+@import "styles/variables.scss";
+
+.__form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+
+
+  &--input {
+    background-color: darkgray;
+    border: 0;
+    color: $white;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+
+  &--input:focus {
+    border-color: hsl(243, 100%, 77%);
+    box-shadow: 0 0 0.2rem hsla(243, 81%, 60%, 0.479);
+  }
+
+  &--buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &--back {
+    width: 3rem;
+    height: 2rem;
+  }
+}
