@@ -1,4 +1,4 @@
-@import "src/styles/variables.scss";
+@import "styles/variables.scss";
 
 .search__form {
 
@@ -6,15 +6,19 @@
   padding: 0;
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+  width: 90%;
+  justify-content: space-around;
 
   &--control {
-    background-color: #515a63 !important;
+    background-color: $text-area;
     border: 0;
-    color: $white;
+    color: $black;
+    border-radius: 5px;
+    text-align: center;
   }
 
   &--control:focus {
-    border-color: hsl(243, 100%, 77%);
-    box-shadow: 0 0 0.2rem hsla(243, 81%, 60%, 0.479);
+    border-color: $text-area-shader;
+    box-shadow: 0 0 0.2rem $text-shadow;
   }
 }

@@ -1,4 +1,4 @@
-@import "src/styles/variables.scss";
+@import "styles/variables.scss";
 
 .navbar {
 
@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  min-height: 50px;
+  min-height: 115px;
   min-width: 100vw;
   margin-bottom: 20px;
   padding: 0;
@@ -38,13 +38,14 @@
   }
 
   &__search {
-    display: inline;
+    display: inline-flex;
     margin: 0.75rem;
+    width: 350px;
   }
 
   &__login {
     display: flex;
-    align-items: center;
+    width: 225px;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
   }
