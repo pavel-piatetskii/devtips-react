@@ -1,0 +1,20 @@
+@import "src/styles/variables.scss";
+
+.search__form {
+
+  display: inline-flex;
+  padding: 0;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+
+  &--control {
+    background-color: #515a63 !important;
+    border: 0;
+    color: $white;
+  }
+
+  &--control:focus {
+    border-color: hsl(243, 100%, 77%);
+    box-shadow: 0 0 0.2rem hsla(243, 81%, 60%, 0.479);
+  }
+}

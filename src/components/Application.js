@@ -1,8 +1,9 @@
-import logo from '../logo.svg';
-import './Application.scss';
+import React, { useEffect } from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import TipList from "./TipList"
+import Header from "./Header";
+import "./Application.scss";
 
 export default function Application() {
 
@@ -20,6 +21,9 @@ export default function Application() {
     }, [state.p]);
 
   return (
+    <main className="layout">
+      <Header />
+    </main>
     <TipList 
       tips={state.tips}
     />
