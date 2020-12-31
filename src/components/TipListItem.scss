@@ -1,0 +1,49 @@
+  .tip-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0em;
+  }
+
+  .tip-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background-color: lightskyblue;
+  }
+
+  .tip-controls {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .tip-content {
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #f6f6f6;
+    border: 2px solid  lightslategrey;
+    border-radius: 5px;
+    margin: 0em 0.5em;
+    
+    > * {
+      padding: 0em 1em;
+    }
+  }
+  
+  .tip-title-and-time {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1em;
+
+    a:first-child {
+      font-size: 1.25rem;
+    }
+  }
+
+  .tags-field {
+    display: block;
+    background-color: lightgray;
+    padding: 0.5em 1em;
+
+  }

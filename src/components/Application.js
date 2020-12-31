@@ -1,36 +1,27 @@
 import logo from '../logo.svg';
 import './Application.scss';
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import TipList from "./TipList"
 
 export default function Application() {
 
-  const stub = false;
+  const [state, setState] = useState({
+    tips: []
+  });
 
   useEffect(() => {
     Promise.all([
       axios.get('/tips/?tipIDs=[1,2,3]')
     ]).then(all => {
-      console.log(all)
+      console.log(all[0].data);
+      setState({ tips: all[0].data });
       })
-    }, [stub]);
+    }, [state.p]);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>components/Application.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TipList 
+      tips={state.tips}
+    />
   );
 };
