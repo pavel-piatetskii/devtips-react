@@ -4,8 +4,8 @@ import "./index.scss";
 
 // import useVisualMode from "src/hooks/useVisualMode";
 
-import logo from "./logo.png";
-import Search from "./Search";
+import logo from "components/header/logo.png";
+import Search from "components/header/Search";
 import NoUser from "./NoUser";
 
 export default function Header(props) {

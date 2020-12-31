@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
 import TipList from "./TipList"
 import Header from "./Header";
 import "./Application.scss";
@@ -23,9 +22,9 @@ export default function Application() {
   return (
     <main className="layout">
       <Header />
-    </main>
-    <TipList 
+      <TipList 
       tips={state.tips}
-    />
+      />
+    </main>
   );
 };
