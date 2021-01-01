@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
-import back from "images/back.png";
 import Button from "components/Button";
 
 import "./LoginRegister.scss";
@@ -37,12 +38,7 @@ export default function Register(props) {
         onChange={e => setPassword(e.target.value)}
       />
       <section className="__form--buttons">
-        <img 
-          className="__form--back"
-          src={back}
-          alt="Back"
-          onClick={props.onBack}
-        />
+      <FontAwesomeIcon icon={faArrowAltCircleLeft} size="lg" onClick={props.onBack} />
         <Button submit onClick={props.onRegister}>Register</Button>
       </section>
     </main>

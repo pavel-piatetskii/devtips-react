@@ -22,6 +22,11 @@ export default function Header(props) {
     props.user ? LOGGED_IN : NO_USER
   );
 
+function logout() {
+    transition(NO_USER, true);
+    props.onLogout();
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar--centered">
@@ -35,7 +40,7 @@ export default function Header(props) {
       </div>
       <div className="navbar__login">
         {mode === LOGGED_IN && (
-          <LoggedIn user={props.user} />
+          <LoggedIn user={props.user} onLogout={logout}/>
         )}
         {mode === NO_USER && (
           <NoUser onLogin={() => transition(LOGIN)} onRegister={() => transition(REGISTER)}/>

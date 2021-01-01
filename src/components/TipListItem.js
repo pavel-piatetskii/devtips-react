@@ -52,28 +52,31 @@ export default function TipListItem(props) {
     break;
   case 'image':
     content += `<div class="image"><img src="${data}" class="mw-100" alt="${title}"></div>`;
+    break;
+  default:
+    throw new Error(`Unsupported type: ${type}.`);
   }
 
 	return (
 		<div className="tip-list-item">
 			<div className="tip-controls">
-						<img className={likeClass} id={likeID}></img>
-						<a>{Parser("&#128077")}</a>
+						<img className={likeClass} id={likeID} alt="likeID"></img>
+						<a href={tipLink}>{Parser("&#128077")}</a>
 						<span className="like badge badge-dark mb-2">{likes.length}</span>
-						<img className={bookClass} id={bookID}></img>
-						<a>{Parser("&#128214")}</a>
+						<img className={bookClass} id={bookID} alt="bookID"></img>
+						<a href={tipLink}>{Parser("&#128214")}</a>
 				</div>
 					<div className="tip-content">
 						<div className="tip-title-and-time">
 							<a href={tipLink}>{title}</a>
-							<a>{timeAgo(created_at)}</a>
+							<a href={tipLink}>{timeAgo(created_at)}</a>
 						</div>
 						<div className="card-body" >
 							{Parser(content)}
 						</div>
 						<mark className="tags-field">{Parser(tagsField)}</mark>
 			</div>
-					<a href={creatorPage}><img className="tip-avatar" src={avatar}></img></a>
+					<a href={creatorPage}><img className="tip-avatar" src={avatar} alt="avatar"></img></a>
 		</div>
 	);
 

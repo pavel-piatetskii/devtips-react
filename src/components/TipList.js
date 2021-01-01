@@ -16,8 +16,6 @@ export default function TipList(props) {
         title = {el.title}
         creator_id = {el.creator_id}
         likes = {el.likes}
-        is_liked = {el.is_liked}
-        is_bookmarked = {el.is_bookmarked}
         data={el.data}
         created_at={el.created_at}
         tags={el.tags}
