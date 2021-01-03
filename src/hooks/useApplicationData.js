@@ -8,16 +8,23 @@ import reducer, {
 export default function useApplicationData() {
   const [state, dispatch] = useReducer(reducer, {
     tips: [],
-    user: {
-      "id": 1,
-      "name": "Adam Thorne",
-      "email": "ahthornev2@gmail.com",
-      "avatar": "https://avatars.dicebear.com/4.4/api/avataaars/15.svg"
-    }
+    user: null
   });
 
-  function onLogout() {
+  const onLogout = () => {
     dispatch({ type: SET_USER_DATA, user: null });
+  };
+
+  const onLogin = (email, password) => {
+    axios.post('/user/login', {
+      email,
+      password
+    })
+    .then(all => {
+      console.log(all.data);
+      dispatch({ type: SET_USER_DATA, user: all.data });
+    })
+    .catch(e => console.error(e));
   };
 
   useEffect(() => {
@@ -30,5 +37,5 @@ export default function useApplicationData() {
     .catch(e => console.error(e));
     }, [state.p]);
 
-  return { state, onLogout };
+  return { state, onLogout, onLogin };
 };

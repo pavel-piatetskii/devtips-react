@@ -23,9 +23,15 @@ export default function Header(props) {
   );
 
 function logout() {
-    transition(NO_USER, true);
-    props.onLogout();
-  };
+  transition(NO_USER, true);
+  props.onLogout();
+};
+
+function login(email, password) {
+  props.onLogin(email, password)
+    .then(() => transition(LOGGED_IN))
+    .catch(e => console.error(e));
+};
 
   return (
     <nav className="navbar">
@@ -46,7 +52,7 @@ function logout() {
           <NoUser onLogin={() => transition(LOGIN)} onRegister={() => transition(REGISTER)}/>
         )}
         {mode === LOGIN && (
-          <Login onBack={() => back()} />
+          <Login onBack={() => back()} onLogin={login} />
         )}
         {mode === REGISTER && (
           <Register onBack={() => back()} />

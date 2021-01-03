@@ -22,6 +22,10 @@
     box-shadow: 0 0 0.2rem $text-shadow;
   }
 
+  &__validation {
+    color: $danger-color;
+  }
+
   &--buttons {
     display: flex;
     flex-direction: row;
@@ -38,4 +42,5 @@
     cursor: pointer;
     box-shadow: 0 0 0.2rem $text-shadow;
   }
+
 }

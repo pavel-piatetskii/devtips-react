@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 import Button from "components/Button";
 
@@ -9,6 +9,19 @@ import "./LoginRegister.scss";
 export default function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const validate = function() {
+    if (email === "") {
+      setError("Email cannot be blank");
+      return;
+    } else if (password === "") {
+      setError("Password cannot be blank");
+      return;
+    }
+    setError("");
+    props.onLogin(email, password);
+  };
 
   return (
     <main className="__form">
@@ -28,9 +41,10 @@ export default function Login(props) {
         value={password}
         onChange={e => setPassword(e.target.value)}
       />
+      <section className="__form__validation">{error}</section>
       <section className="__form--buttons">
-        <FontAwesomeIcon icon={faArrowAltCircleLeft} size="lg" onClick={props.onBack} />
-        <Button submit onClick={props.onLogin}>Login</Button>
+        <FontAwesomeIcon icon={faChevronCircleLeft} size="lg" onClick={props.onBack} />
+        <Button submit onClick={() => validate()}>Submit</Button>
       </section>
     </main>
   );

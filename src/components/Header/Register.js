@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 import Button from "components/Button";
 
@@ -38,8 +38,8 @@ export default function Register(props) {
         onChange={e => setPassword(e.target.value)}
       />
       <section className="__form--buttons">
-      <FontAwesomeIcon icon={faArrowAltCircleLeft} size="lg" onClick={props.onBack} />
-        <Button submit onClick={props.onRegister}>Register</Button>
+        <FontAwesomeIcon icon={faChevronCircleLeft} size="lg" onClick={props.onBack} />
+        <Button submit onClick={props.onRegister}>Submit</Button>
       </section>
     </main>
   );
